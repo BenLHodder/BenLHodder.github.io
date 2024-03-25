@@ -28,7 +28,18 @@
     font-size: 2rem;
     color: white;
     padding: 20px;
+    animation: glow 5s ease-in-out infinite alternate;
   }
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000, 0 0 80px #000000;
+    }
+}
 
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
@@ -84,6 +95,7 @@ header nav ul li:hover {
     background: none;
   font-style: bold;
   transform: scale(1.2);
+  animation: glow 2.5s ease-in-out infinite alternate;
 }
 
 header nav ul li a {
